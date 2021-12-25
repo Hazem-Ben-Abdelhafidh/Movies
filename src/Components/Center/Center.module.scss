@@ -1,0 +1,9 @@
+@import '../../Styles/mixins.scss';
+.Center {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 5rem;
+    grid-template-columns: repeat(auto-fit,45rem);
+    
+}

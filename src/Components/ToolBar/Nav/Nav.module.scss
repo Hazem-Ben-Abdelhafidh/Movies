@@ -1,0 +1,40 @@
+@import '../../../Styles/mixins.scss';
+@import '../../../Styles/variables.scss';
+.Nav {
+    ul {
+
+        @include flexCenter(row);
+        list-style: none;
+
+        li {
+            padding: .5rem;
+            font-size: 16px;
+            a {
+                text-decoration: none;
+                position: relative;
+                padding: .2rem;
+                color:$primary-color ;
+                &::after{
+                    content:'';
+                    position:absolute;
+                    left:0;
+                    bottom:0;
+                    transform: scaleX(0);
+                    height: .2rem;
+                    width: 100%;
+                    transform-origin: right;
+                    transition: transform .3s ease-in .15s;
+                    background-color: $primary-color;
+                }
+              
+                &:hover::after{
+                    transform:scaleX(1);
+                    transform-origin: left;
+                    
+
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import './variables.scss';
+@mixin flexCenter ($fd){
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $fd;
+}
+
+@mixin flexBetween ($fd){
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: $fd;
+}
+
+@mixin images {
+    
+        transition: all .2s ease-in;
+        @include flexCenter(column);
+        height: 35rem;
+        width: 20rem;
+        margin:.5rem;
+        .image {
+            height:100%;
+            width: 100%;
+            cursor:pointer; 
+            padding: .2rem;
+            margin-bottom: .2rem;
+        }
+        &:hover{
+            transform: scale(1.02);
+        }
+    
+}
+
+@mixin mq($size) {
+    @media (min-width: $size){
+        @content;
+    }
+}

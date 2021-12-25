@@ -1,0 +1,16 @@
+@import '../../Styles/mixins.scss';
+.Results{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,30rem);
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+    .Container {
+        @include images;
+    }
+    
+}

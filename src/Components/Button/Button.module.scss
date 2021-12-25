@@ -1,0 +1,50 @@
+@import '../../Styles/variables.scss';
+.Button {
+    border:3px solid $primary-color;
+    padding:1rem;
+    margin: 2rem 0;
+    cursor: pointer;
+    color:$primary-color;
+    background:none;
+    font-size: 1.6rem;
+    position:relative;
+    width: 45rem;
+    z-index: 7;
+    transition: color 1s,
+                transform .4s ease-in;
+    &::after{
+        content: '';
+        position:absolute;
+        left:0;
+        top:0;
+        width: 50%;
+        transform: scaleX(0);
+        height:100%;
+        background-color: $primary-color;
+        transition: transform .5s ease;
+        transform-origin: left;
+        z-index: -1;
+    }
+    &::before{
+        z-index: -1;
+        background-color: $primary-color;
+        transition: transform .5s ease;
+        transform: scaleX(0);
+        content: '';
+        position:absolute;
+        right:0;
+        top:0;
+        width:50%;
+        height:100%;
+        transform-origin:right;
+    }
+    &:hover::after,&:hover::before {
+        transform:scaleX(1);
+    }
+    &:hover {
+        transform:translateY(-.5rem);
+        color: white;
+
+    }
+    
+}

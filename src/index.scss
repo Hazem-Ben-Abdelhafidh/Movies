@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import './Styles/variables.scss';
+*,
+*::after,
+*::before{
+    font-family: 'Roboto', sans-serif;
+    color:$font-color;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    font-size: 62.5% ;
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+    &-thumb { 
+            background-color: #888;
+            border-radius: 5rem; 
+    }
+    &-track {
+        background:#f1f1f1; 
+    }
+}
+
+
+.swiper-button-prev {
+    color: red;
+}

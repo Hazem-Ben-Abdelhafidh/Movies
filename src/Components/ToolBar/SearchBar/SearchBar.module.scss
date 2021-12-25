@@ -1,0 +1,32 @@
+@import '../../../Styles/mixins.scss';
+@import '../../../Styles/Variables.scss';
+.SearchBar {
+    display: flex;
+    background:white;
+    padding: .7rem;
+    border-radius: 100vh;
+    width: 30rem;
+    box-shadow: 0 .1rem .2rem $font-color ;
+    transition: all .2s ease-in;
+    &:focus-within{
+        transform: scaleX(1.12);
+    }
+    input {
+        outline: none;
+        border: none;
+        flex-grow: 1;
+        transition: all .2s ease-in-out;
+        background:transparent;
+        font-size: 16px;
+        
+    }
+    button {
+        border:none;
+        cursor: pointer;
+        background: none;
+     
+    }
+    
+}
+
+ 

@@ -1,0 +1,19 @@
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
+.Carousel {
+    margin: 5rem 0;
+    
+    h2{
+        color:$primary-color-dark;
+        margin: 2rem;
+        padding:.5rem;
+        text-transform: uppercase;
+    }
+    .Container {
+        @include images;
+    }
+    
+}
+
+
+
